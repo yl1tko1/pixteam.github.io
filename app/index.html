@@ -5,14 +5,142 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Тестовое задание</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
   <link rel="stylesheet" href="css/libs.css">
   <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
 
+  <header class="main-header">
 
-<script async src="js/scripts.js"></script>
+  <div class="slider">
+
+      <div class="slider__item--one">
+        <div class="container">
+          <div class="logo">
+            <img src="img/logo.png" width="273px" height="273px" alt="">
+          </div>
+          <h1>
+            Be sure you put your feet <br>
+            <span class="bold">in the right place</span>
+          </h1>
+        </div>
+      </div>
+
+      <!-- <div class="slider__item--two">
+        <div class="container">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis beatae quaerat itaque dicta sequi architecto recusandae doloribus minus quia mollitia autem aperiam, reiciendis quae esse. Beatae aperiam illum eum in.</p>
+        </div>
+      </div> -->
+
+  </div>
+
+    <div class="main-header__zip">
+      <form action="send.php" method="post">
+        <input type="text" name="zip" placeholder="Enter your zip code">
+        <img src="img/zip.jpg" alt="">
+        <b>Thisis Photoshop's version of <br> Lorem ipsum</b>
+        <button type="submit">Press Me</button>
+      </form>
+    </div>
+
+  </header>
+
+  <main>
+    <div class="container">
+
+      <div class="files clearfix">
+
+        <div class="files__item">
+          <img src="img/file-1.png" width="95" height="121" alt="">
+          <div class="files__description">
+            <b>Documnts</b>
+            <p>This is Photoshop's version  of  Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin</p>
+          </div>
+        </div>
+
+        <div class="files__item">
+          <img src="img/file-2.png" width="95" height="121" alt="">
+          <div class="files__description">
+            <b>Photos</b>
+            <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin</p>
+          </div>
+        </div>
+
+        <div class="files__item">
+          <img src="img/file-1.png" width="95" height="121" alt="">
+          <div class="files__description">
+            <b>Documnts</b>
+            <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin</p>
+          </div>
+        </div>
+
+        <div class="files__item">
+          <img src="img/file-2.png" width="95" height="121" alt="">
+          <div class="files__description">
+            <b>Photos</b>
+            <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin</p>
+          </div>
+        </div>
+        <div class="files__item">
+          <img src="img/file-1.png" width="95" height="121" alt="">
+          <div class="files__description">
+            <b>Documnts</b>
+            <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin</p>
+          </div>
+        </div>
+
+        <div class="files__item">
+          <img src="img/file-2.png" width="95" height="121" alt="">
+          <div class="files__description">
+            <b>Photos</b>
+            <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin</p>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="heading">
+        <div class="container">
+          <div class="heading__top">
+            <img src="img/heading-top.png" alt="">
+            <b>This is a Heading</b>
+            <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.</p>
+            <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+          </div>
+          <div class="headeing__bottom">
+            <img src="img/heading-bottom.png" alt="">
+            <b>This is a Heading</b>
+            <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+            <a href="" class="heading__download">Download</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="map">
+        <div class="container">
+          <form action="sends.php" method="post" class="map__form">
+            <input type="text" placeholder="name">
+            <input type="text" placeholder="email address">
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <button><img src="img/send.jpg" alt=""></button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p> © Copyright 2013 Css Author, All Rights Reserved. </p>
+    </div>
+  </footer>
+
 <script  src="js/libs.min.js"></script>
+<script async src="js/scripts.js"></script>
 </body>
 </html>

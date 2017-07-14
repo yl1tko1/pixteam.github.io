@@ -28,6 +28,8 @@ gulp.task('sass', function(){
 gulp.task('scripts', function(){
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
+		'app/libs/jquery-migrate/jquery-migrate.min.js',
+		'app/libs/slick/slick/slick.min.js'
 		])
 	.pipe(concat('libs.min.js'))
 	.pipe(uglify())
