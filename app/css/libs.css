@@ -316,7 +316,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-.slick-dots li.slick-active button:before
+.slick-dots li.is-active button:before
 {
     opacity: .75;
     color: black;

@@ -6,3 +6,7 @@
 =rmin($width)
   @media only screen and (min-width: $width+ "px")
     @content
+
+=rmm($width, $widthm)
+  @media screen and (min-width: $width+ "px") and (max-width: $widthm+ "px")
+    @content

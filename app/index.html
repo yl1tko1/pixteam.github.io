@@ -19,7 +19,7 @@
       <div class="slider__item--one">
         <div class="container">
           <div class="logo">
-            <img src="img/logo.png" width="273px" height="273px" alt="">
+            <img src="img/logo.png" width="273" height="273" alt="">
           </div>
           <h1>
             Be sure you put your feet <br>
@@ -28,17 +28,23 @@
         </div>
       </div>
 
-      <!-- <div class="slider__item--two">
+      <div class="slider__item--two">
         <div class="container">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis beatae quaerat itaque dicta sequi architecto recusandae doloribus minus quia mollitia autem aperiam, reiciendis quae esse. Beatae aperiam illum eum in.</p>
+          <div class="logo">
+            <img src="img/logo.png" width="273" height="273" alt="">
+          </div>
+          <h1>
+            Be sure you put your feet <br>
+            <span class="bold">in the right place</span>
+          </h1>
         </div>
-      </div> -->
+      </div>
 
   </div>
 
     <div class="main-header__zip">
-      <form action="send.php" method="post">
-        <input type="text" name="zip" placeholder="Enter your zip code">
+      <form action="send.php" id="zip" method="post">
+        <input type="text" name="code" placeholder="Enter your zip code">
         <img src="img/zip.jpg" alt="">
         <b>Thisis Photoshop's version of <br> Lorem ipsum</b>
         <button type="submit">Press Me</button>
@@ -105,18 +111,21 @@
       <div class="heading">
           <div class="heading__top">
             <div class="container">
-              <img src="img/tablate.png" width="153" height="153" alt="">
-              <b class="heading__title">This is a Heading</b>
-              <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.</p>
-              <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+              <div class="inner-wrapper">
+                <b class="heading__title">This is a Heading</b>
+                <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.</p>
+                <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+              </div>
             </div>
           </div>
           <div class="heading__bottom">
-            <img src="img/pc-1.png" width="505" height="433" alt="">
             <div class="container">
-              <b class="heading__title">This is a Heading</b>
-              <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
-              <a href="#" class="heading__download">Download</a>
+              <div class="heading__icon"></div>
+              <div class="inner-wrapper">
+                <b class="heading__title">This is a Heading</b>
+                <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+                <a href="#" class="heading__download">Download</a>
+              </div>
             </div>
         </div>
       </div>
@@ -126,17 +135,17 @@
         <div id="map"></div>
           <div class="container">
             <div  class="map__form">
-            <form action="sends.php" method="post">
-              <input type="text" placeholder="name">
-              <input type="text" placeholder="email address">
-              <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
-              <button><img src="img/send.png" alt=""></button>
-            </form>
+              <form action="sends.php" id="map-form" method="post" autocomplete="off">
+                <input type="text" name="name" placeholder="Name" autocomplete="off">
+                <input type="text" name="email" placeholder="Email address">
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                <button><img src="img/send.png" alt=""></button>
+              </form>
+            </div>
           </div>
-        </div>
       </div>
 
-    </div>
+
   </main>
 
   <footer>

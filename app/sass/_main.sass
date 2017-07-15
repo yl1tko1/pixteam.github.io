@@ -1,4 +1,6 @@
 $green: #5fc18b
+$tablet: 1024
+$mobile: 768
 
 body
   font-family: 'Open Sans', sans-serif
@@ -13,10 +15,15 @@ body
   display: table
   content: ""
 
+
 .container
   width: 960px
   margin: 0 auto
   padding: 0px 10px
+  +r($mobile)
+    width: 90%
+  +r($tablet)
+    width: 90%
 
 .main-header
   position: relative
@@ -26,6 +33,8 @@ body
     bottom: -113px
     width: 100%
     font-size: 15px
+    +r($mobile)
+      position: static
     form
       width: 334px
       margin: 0 auto
@@ -33,23 +42,29 @@ body
       padding: 30px 0px 25px
       border-radius: 2px
       box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.28)
+      +r($mobile)
+        width: 100%
+      img
+        width: 100%
       input
         width: 264px
-        height: 36px
         border-radius: 2px
         border: 1px solid #e5e5e5
-        padding: 0px 15px
+        padding: 9px 15px
         margin: 0 auto 23px
         display: block
         &::placeholder
           color: #b4adad
+      input.is-valid
+        border: 1px solid red
+
       b
         color: #938e8e
         text-align: center
         font-weight: 400
         width: 100%
         display: block
-        margin: 28px 0px
+        margin: 25px 0px
         line-height: 20px
       button
         display: block
@@ -58,7 +73,7 @@ body
         text-transform: uppercase
         color: #FFF
         font-size: 25px
-        padding: 12px 45px
+        padding: 10px 45px
         border-radius: 2px
         transition: .5s
         &:hover, &:active
@@ -67,22 +82,24 @@ body
 .slider
   width: 100%
   display: inline
+  h1
+    color: #fff
+    text-transform: uppercase
+    text-align: center
+    font-size: 49.35px
+    line-height: 1.28
+    font-weight: 400
+    +r($mobile)
+      font-size: 2.6em
   &__item--one
     background: url(../img/header-bg-1.jpg) center center no-repeat
     background-size: cover
     height: 800px
     width: 100%
-    h1
-      color: #fff
-      text-transform: uppercase
-      text-align: center
-      font-size: 49.35px
-      line-height: 1.28
-      font-weight: 400
   &__item--two
     background: url(../img/header-bg-2.jpg) center center no-repeat
     background-size: cover
-    height: 100vh
+    height: 800px
     width: 100%
 
 .logo
@@ -93,6 +110,8 @@ body
 .files
   width: 870px
   margin: 168px auto 0px
+  +r($mobile)
+    width: 100%
   &__item
     display: -webkit-flex
     display: -ms-flex
@@ -103,11 +122,25 @@ body
       height: 121px
       float: left
       margin-right: 30px
+      +r($mobile)
+        margin: 0 auto
+        float: none
   &__description
     float: left
     width: 275px
+    +r($mobile)
+      width: 100%
+      float: none
+    +rmm($mobile, $tablet)
+      width: 75%
+    +rmm(850, 1024)
+      width: 60%
     b
       font-size: 27px
+      +r($mobile)
+        text-align: center
+        display: block
+        margin: 20px 0
     p
       color: #4f4e4e
   .slick-dots
@@ -116,9 +149,12 @@ body
     margin-bottom: 40px
     li
       margin: 0 17.5px
+      +r($mobile)
+        margin: 0 5px
 
 .files.slick-dotted.slick-slider
   margin-bottom: 0
+  width: 90%
 
 .heading
   color: #fff
@@ -133,27 +169,48 @@ body
   &__top
     display: inline-block
     width: 100%
-    min-height: 544px
-    background: #5fc18b url(../img/hd-bg-top.jpg) top center no-repeat
+    min-height: 873px
+    background: #5fc18b url(../img/heading-line.png) center bottom no-repeat
     position: relative
+    background-size: 100%
+    +rmm(1600, 1920)
+      background-size: 100% 45%
     img
       display: block
       margin: 87px auto 37px 383px
     p
       width: 650px
-      margin: 0 auto 55px
+      margin: 0 auto 53px
       color: #fff
+      +r($mobile)
+        width: 100%
+        margin: 0 auto 20px
+    +r(320)
+      p:last-child
+        margin-bottom: 100px
+    b
+      margin-top: 184px
+    .inner-wrapper
+      background: url(../img/bg-heading-top.png) top no-repeat
+      margin-top: 80px
+      background-size: 504px 504px
+      background-position-x: 45px
+      display: inline-block
+      width: 100%
+      +r($mobile)
+        background: url(../img/icon-top.png) top center no-repeat
+
   &__bottom
     display: inline-block
     width: 100%
-    height: 809px
-    background: url(../img/hd-bg-bot.jpg) top center no-repeat
-    background-size: 100%
-    margin-top: -76px
+
+    background: #44a36f
     position: relative
-    img
-      float: left
-      margin-right: 55px
+    .inner-wrapper
+      margin-left: 397px
+      margin-top: 20px
+      +r($mobile)
+        margin-left: 0
     b
       text-align: left
       margin-bottom: 23px
@@ -167,8 +224,31 @@ body
       border-radius: 5px
       padding: 8px 31px
       line-height: normal
+      transition: .5s
+      &:hover, &:active
+        background: #fff
+        color: #000
+      +r($mobile)
+        display: block
+        text-align: center
+        margin-bottom: 40px
     .container
-      margin-top: 363px
+      position: relative
+      min-height: 476px
+      +r($mobile)
+        min-height: auto
+  &__icon
+    width: 505px
+    height: 421px
+    background: url(../img/bg-heading-bottom.png)
+    position: absolute
+    bottom: 0
+    left: -160px
+    +r($mobile)
+      width: 100%
+      background: url(../img/icon-bottom.png) top center no-repeat
+      position: static
+      height: 230px
 
 .map
   position: relative
@@ -183,21 +263,29 @@ body
     border-radius: 50%
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.09)
     display: table
+    +r($mobile)
+      width: 90%
+      border-radius: 30px
+      margin: 100px 5%
+      left: 0
     form
       margin: 110px auto 0
       width: 273px
-    input, textarea
-      border: 1px solid #d8d8d8
-      padding: 8px 15px
-      width: 100%
-      margin-bottom: 13px
-    textarea
-      height: 80px
-      margin-bottom: 33px
-    button
-      background: transparent
-      margin: 0 auto
-      display: block
+      input, textarea
+        border: 1px solid #d8d8d8
+        padding: 8px 15px
+        width: 100%
+        margin-bottom: 13px
+      textarea
+        height: 80px
+        margin-bottom: 33px
+        font-family: "Open Sans"
+      button
+        background: transparent
+        margin: 0 auto
+        display: block
+    input.is-valid, textarea.is-valid
+      border: 1px solid red
 
 #map
   width: 100%
