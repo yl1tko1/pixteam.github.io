@@ -10,3 +10,7 @@
 =rmm($width, $widthm)
   @media screen and (min-width: $width+ "px") and (max-width: $widthm+ "px")
     @content
+
+=rmx($width, $height)
+  @media screen and (max-width: $width+ "px"), screen and (max-height: $height+ "px")
+    @content
